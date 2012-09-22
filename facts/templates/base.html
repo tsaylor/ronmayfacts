@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <link rel="stylesheet" href="{{ STATIC_URL }}style.css" type="text/css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}newbubble.css" type="text/css" />
+    <title>{% block title %}Ron May Facts!{% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        {% block header %}
+        {% endblock header %}
+    </div>
+
+    {% block sidebar %}
+    <div class="bg"><div class="sidebar">
+        {% block navbar %}
+        <!--ul>
+            <li><a href="/">About Ron May</a></li>{% block aboutronmay_subnav %}{% endblock aboutronmay_subnav %}
+            <li><a href="/random/">Random Fact</a></li>{% block randomfact_subnav %}{% endblock randomfact_subnav %}
+            <li><a href="/">May Moments</a></li>{% block maymoments_subnav %}{% endblock maymoments_subnav %}
+            <li><a href="/">May Mart</a></li>{% block maymart_subnav %}{% endblock maymart_subnav %}
+            <li><a href="/">May Links</a></li>{% block maylinks_subnav %}{% endblock maylinks_subnav %}
+            <li><a href="/">About Us</a></li>{% block aboutus_subnav %}{% endblock aboutus_subnav %}
+        </ul-->
+        {% endblock navbar %}
+    </div>
+    {% endblock sidebar %}
+
+    {% block content %}
+        <div class="content">
+        </div>
+    {% endblock content %}
+
+    <div class="footer">
+        {% block footer %}
+        <!--p>I can has sharealike?</p-->
+        {% endblock footer %}
+    </div></div>
+    <!-- Begin google analytics code -->
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-4124897-2");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+    </script>
+    <!-- End google analytics code -->
+</body>
+</html>

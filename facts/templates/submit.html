@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block header %}
+<!--img src="{{ STATIC_URL }}casettelogo.jpg" alt="Ron May Facts!" /-->
+{% endblock header %}
+
+{% block sidebar %}
+<div class="person-info">
+    <img src="{{ STATIC_URL }}bgnarrow.png">
+</div>
+{% endblock sidebar %}
+
+{% block content %}
+<div class="bubbleleft">
+<div class="bubbleright">
+<div class="bubbletop">
+<div class="bubblebottom">
+    <div class="roundtop">
+        <img src="{{ STATIC_URL }}bubble/bubble-top-left.png" class="corner" />
+    </div>
+
+    <p>
+    Give me a new fact about myself!
+    </p>
+    
+    <table id="submissionform">
+        <tr><td></td><td><h2>Submit a new fact</h2></td></tr>
+        <form method="POST" action="/facts/submit/">
+            {% csrf_token %}
+            {{ form }}
+            <tr><td></td><td><input type="submit" value="Submit"></td></tr>
+        </form>
+    </table>
+
+    <div class="roundbottom">
+        <img src="{{ STATIC_URL }}bubble/bubble-bottom-left.png" class="corner" />
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<img src="{{ STATIC_URL }}casettelogo.jpg" alt="Ron May Facts!" class="casette" />
+{% endblock content %}

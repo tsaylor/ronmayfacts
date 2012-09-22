@@ -1,0 +1,45 @@
+div.person-info {
+    position: absolute;
+    padding: 0 20px 85px 0;
+    width: 144px;
+    max-height: 30px!important;
+    background: url(/static/bubble/bubble-nipple.png) bottom right no-repeat;
+}
+
+.bubbleleft {
+    background: #ffffff url(/static/bubble/bubble-left.png) left repeat-y;
+    margin-left: 160px;
+    margin-right: 190px;
+}
+
+.bubbleright {
+    background: url(/static/bubble/bubble-right.png) right repeat-y;
+}
+
+.bubbletop {
+    background: url(/static/bubble/bubble-top.png) top repeat-x;
+}
+
+.bubblebottom {
+    background: url(/static/bubble/bubble-bottom.png) bottom repeat-x;
+}
+
+.bubblebottom p {
+    margin: 0px 30px 10px 30px;
+    min-height: 200px;
+    font-size: 40pt;
+    font-color: #2a2a2a;
+}
+
+.roundtop { 
+    background: url(/static/bubble/bubble-top-right.png) no-repeat top right; 
+}
+
+.roundbottom {
+    background: url(/static/bubble/bubble-bottom-right.png) no-repeat bottom right; 
+}
+
+img.corner {
+   border: none;
+   display: block !important;
+}

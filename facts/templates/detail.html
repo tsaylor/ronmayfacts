@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block header %}
+Fact!
+{% endblock header %}
+
+{% block content %}
+<span class="fact">{{ fact.factoid }}</span><br />
+- {{ fact.name }}
+{% endblock content %}
