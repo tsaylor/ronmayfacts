@@ -10,6 +10,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'ronmayfacts.views.home', name='home'),
     # url(r'^ronmayfacts/', include('ronmayfacts.foo.urls')),
 
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
@@ -17,8 +19,3 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^', include('facts.urls')),
 )
-
-if not settings.DEBUG:
-    urlpatterns = patterns('',
-        (r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
-    ) + urlpatterns
